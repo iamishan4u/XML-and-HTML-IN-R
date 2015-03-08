@@ -1,0 +1,13 @@
+##FIRST WE HAVE TO INSTALL THE XML PACKAGE
+install(XML)
+library(XML)
+##Specify the url of xml we want to parse
+FileURL<-"http://www.w3schools.com/xml/cd_catalog.xml"
+##xmlTreeParse-used to load xml into R memory
+doc<-xmlTreeParse(FileURL,useInternalNodes = TRUE)
+##rootnode is a kind of wrapper for XML document
+rootnode<-xmlRoot(doc)
+names(rootnode)
+##subsetting
+rootnode[[1]]
+rootnode[[1]][[4]]
