@@ -10,4 +10,8 @@ rootnode<-xmlRoot(doc)
 names(rootnode)
 ##subsetting
 rootnode[[1]]
+##get the 4TH SUBPART FROM 1ST ELEMENT
 rootnode[[1]][[4]]
+##xmlSApply will programatically extends parts of the file and it loop through rootnode
+xmlSApply(rootnode,xmlValue)
+##END
